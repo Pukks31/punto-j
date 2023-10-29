@@ -1,0 +1,66 @@
+.bg-image-vertical {
+    position: relative;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: auto 100%;
+    }
+    
+    @media (min-width: 1025px) {
+    .h-custom-2 {
+    height: 100%;
+    }
+    }
+
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    max-width: 100px;
+    margin-right: 10px;
+}
+
+.logout {
+    text-align: right;
+}
+
+.buttons {
+    text-align: center;
+    margin: 20px auto;
+}
+
+/* Estilos para los botones */
+.button-orange {
+    background-color: #ff6600; /* Cambiar a color naranja */
+    color: #fff;
+    border: none;
+    padding: 15px 30px; /* Aumentar el tamaño de los botones */
+    border-radius: 5px;
+    margin: 10px;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+}
+
+.button-orange:hover {
+    background-color: #e65500; /* Cambiar a un tono más oscuro al pasar el cursor */
+}
