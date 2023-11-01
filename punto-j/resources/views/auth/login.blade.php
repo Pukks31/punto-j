@@ -12,15 +12,7 @@
     integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
 
   <link rel="stylesheet" href="{{asset('assets/estilos.css')}}">
-  <style>
-    body {
-      overflow-y: hidden; /* Oculta la barra de desplazamiento vertical */
-    }
-
-    .vh-100 {
-      height: 100vh; /* Establece una altura fija al 100% del alto de la ventana */
-    }
-  </style>
+  
 </head>
 
 <body>

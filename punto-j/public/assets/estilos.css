@@ -18,6 +18,10 @@ body {
     background-color: #f0f0f0;
     margin: 0;
     padding: 0;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
 }
 
 .container {
@@ -43,24 +47,79 @@ body {
     text-align: right;
 }
 
-.buttons {
-    text-align: center;
-    margin: 20px auto;
-}
-
-/* Estilos para los botones */
-.button-orange {
-    background-color: #ff6600; /* Cambiar a color naranja */
+/* Estilos para el botón "Ir a Cosmos UNAB" */
+.button-cosmos {
+    background-color: #f9913b;
     color: #fff;
     border: none;
-    padding: 15px 30px; /* Aumentar el tamaño de los botones */
+    padding: 80px 160px;
     border-radius: 5px;
     margin: 10px;
     cursor: pointer;
     display: inline-block;
     text-align: center;
+    font-size: 1.2em; /* Ajusta el tamaño de la fuente según tus necesidades */
 }
 
-.button-orange:hover {
-    background-color: #e65500; /* Cambiar a un tono más oscuro al pasar el cursor */
+.button-cosmos:hover {
+    background-color: #e67d00;
+}
+
+/* Estilos para el botón "Ir a Mi Portal U" */
+.button-tema {
+    background-color: #f9913b;
+    color: #fff;
+    border: none;
+    padding: 80px 160px;
+    border-radius: 5px;
+    margin: 10px;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    font-size: 1.2em; /* Ajusta el tamaño de la fuente según tus necesidades */
+}
+
+.button-tema:hover {
+    background-color: #e67d00;
+}
+
+/* Estilos para centrar los botones */
+.centered-buttons {
+    text-align: center;
+}
+
+/* Estilos para el botón "Cerrar Sesión" */
+.button-logout {
+    background-color: #f9913b;
+    color: #fff;
+    border: none;
+    padding: 10px 20px; /* Ajusta el tamaño del botón según tus necesidades */
+    border-radius: 5px;
+    margin: 10px auto; /* Centra el botón horizontalmente */
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+}
+
+.button-logout:hover {
+    background-color: #e67d00; /* Cambiar a un tono más oscuro al pasar el cursor */
+}
+
+.welcome-message {
+    text-align: center; /* Centrar el contenido */
+    font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace !important;
+    color: #e67d00;
+    white-space: pre-line; /* Mantiene los saltos de línea */
+    font-size: 24px; /* Tamaño de fuente personalizable */
+    line-height: 1.5; /* Espacio entre líneas personalizable */
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange }
 }

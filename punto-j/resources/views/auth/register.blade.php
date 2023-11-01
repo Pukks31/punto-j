@@ -16,6 +16,24 @@
 
 </head>
 
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Title</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS v5.2.1 -->
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="{{asset('assets/estilos.css')}}">
+
+</head>
+
 <body>
     <section class="vh-100">
         <div class="container-fluid">
@@ -32,27 +50,28 @@
                 <form action="{{route('register')}}" method="post" style="width: 23rem;">
                     @csrf
       
-                  <h3 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Iniciar Sesion</h3>
+                  <h3 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Registrate</h3>
       
                   <div class="form-outline mb-4">
-                    <label class="form-label" for="form2Example18">Nombre</label>
-                    <input type="text" name="name" id="form2Example18" class="form-control form-control-lg" />                    
-                  </div>
-
-                  <div class="form-outline mb-4">
-                    <label class="form-label" for="form2Example18">Correo</label>
-                    <input type="email" name="email" id="form2Example18" class="form-control form-control-lg" />                    
-                  </div>
-      
-                  <div class="form-outline mb-4">
-                    <label class="form-label" for="form2Example28">Contraseña</label>
-                    <input type="password" name="password" id="form2Example28" class="form-control form-control-lg" />
-                  </div>
-
-                  <div class="form-outline mb-4">
-                    <label class="form-label" for="form2Example18">Confirmar contraseña</label>
-                    <input type="password" name="password_confirmation" id="form2Example18" class="form-control form-control-lg" />                    
-                  </div>
+                    <label class="form-label" for="name">Nombre</label>
+                    <input type="text" name="name" id="name" class="form-control form-control-lg" value="{{ old('name') }}" />
+                </div>
+                
+                <div class="form-outline mb-4">
+                    <label class="form-label" for="email">Correo</label>
+                    <input type="email" name="email" id="email" class="form-control form-control-lg" value="{{ old('email') }}" />
+                </div>
+                
+                <div class="form-outline mb-4">
+                    <label class="form-label" for="password">Contraseña</label>
+                    <input type="password" name="password" id="password" class="form-control form-control-lg" value="{{ old('password') }}" />
+                </div>
+                
+                <div class="form-outline mb-4">
+                    <label class="form-label" for="password_confirmation">Confirmar contraseña</label>
+                    <input type="password" name="password_confirmation" id="password_confirmation" class="form-control form-control-lg" value="{{ old('password_confirmation') }}" />
+                </div>
+                
       
                   <div class="pt-1 mb-4">
                     <button class="btn btn-info btn-lg btn-block" type="submit">Registrarse</button>
@@ -82,5 +101,7 @@
     integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
   </script>
 </body>
+
+</html>
 
 </html>

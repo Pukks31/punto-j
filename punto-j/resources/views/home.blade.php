@@ -7,21 +7,26 @@
 <body>
     <div class="container">
         <div class="logo">
-            <img src="{{ asset('assets/unab.png') }}" alt="logo">
+            <img src="{{ asset('assets/unab.png') }}" alt="logo" style="max-width: 100px; margin-right: 10px;">
         </div>
         <div class="logout">
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                <button class="button-orange" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Cerrar Sesión</button>
+                <button class="button-logout" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Cerrar Sesión</button>
                 <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                     @csrf
                 </form>
             </div>
         </div>
     </div>
-    <div class="buttons">
-        <button class="button-orange" onclick="window.open('https://tema.unab.edu.co/login/index.php?testsession=5254', '_blank')">Ir a Tema UNAB</button>
-        <button class="button-orange" onclick="window.open('https://cosmos.unab.edu.co/', '_blank')">Ir a Cosmos UNAB</button>
+    
+    <div class="welcome-message">
+        <h1><span id="typed-text"></span></h1>
     </div>
+    
+    <div class="centered-buttons">
+        <button class="button-cosmos" onclick="window.open('https://cosmos.unab.edu.co/', '_blank')">Ir a Cosmos UNAB</button>
+        <button class="button-tema" onclick="window.open('https://miportalu.unab.edu.co/index.php?mensaje=usuarioInvalido&url=/modulos/ReservaEspaciosdeportivosyculturales/', '_blank')">Ir a Mi Portal U</button>
+    </div>  
     
     <!-- Agrega el script del asistente de Watson aquí -->
     <script>
@@ -35,6 +40,30 @@
             const t=document.createElement('script');
             t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
             document.head.appendChild(t);
+        });
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const message = "Bienvenido, {{ $userName }}, soy Punto J, tu asistente virtual.<br>¿En qué puedo ayudarte?";
+            const typedText = document.getElementById('typed-text');
+            let charIndex = 0;
+
+            const typeWriter = () => {
+                if (charIndex < message.length) {
+                    if (message.charAt(charIndex) === "<") {
+                        const endIndex = message.indexOf(">", charIndex);
+                        typedText.innerHTML += message.slice(charIndex, endIndex + 1);
+                        charIndex = endIndex + 1;
+                    } else {
+                        typedText.innerHTML += message.charAt(charIndex);
+                        charIndex++;
+                    }
+                    setTimeout(typeWriter, 50); // Ajusta la velocidad de escritura aquí
+                }
+            };
+
+            setTimeout(typeWriter, 2000); // Agrega un retraso de 2 segundos antes de comenzar a escribir el mensaje
         });
     </script>
 </body>

@@ -23,6 +23,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $userName = auth()->user()->name; // Obtén el nombre del usuario autenticado
+        return view('home', ['userName' => $userName]);
     }
+
 }
