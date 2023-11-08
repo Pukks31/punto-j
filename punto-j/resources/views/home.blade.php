@@ -3,19 +3,22 @@
 <head>
     <title>Página de inicio</title>
     <link rel="stylesheet" href="{{asset('assets/estilos.css')}}">
+    <!-- Agrega el enlace a Font Awesome para los iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
-<body>
+<body class="home-page bg-dark">
     <div class="container">
         <div class="logo">
             <img src="{{ asset('assets/unab.png') }}" alt="logo" style="max-width: 100px; margin-right: 10px;">
         </div>
         <div class="logout">
-            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                <button class="button-logout" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Cerrar Sesión</button>
-                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                    @csrf
-                </form>
-            </div>
+            <!-- Reemplaza el botón de cerrar sesión por un icono de Font Awesome -->
+            <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                <i class="fas fa-sign-out-alt"></i> <!-- Icono de cerrar sesión -->
+            </a>
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                @csrf
+            </form>
         </div>
     </div>
     
@@ -24,16 +27,17 @@
     </div>
     
     <div class="centered-buttons">
-        <button class="button-cosmos" onclick="window.open('https://cosmos.unab.edu.co/', '_blank')">Ir a Cosmos UNAB</button>
-        <button class="button-tema" onclick="window.open('https://miportalu.unab.edu.co/index.php?mensaje=usuarioInvalido&url=/modulos/ReservaEspaciosdeportivosyculturales/', '_blank')">Ir a Mi Portal U</button>
+        <!-- Estilos personalizados para los botones "Cosmos" y "Mi Portal U" -->
+        <a class="button-cosmos" href="https://cosmos.unab.edu.co/" target="_blank">Ir a Cosmos UNAB</a>
+        <a class="button-tema" href="https://miportalu.unab.edu.co/index.php?mensaje=usuarioInvalido&url=/modulos/ReservaEspaciosdeportivosyculturales/" target="_blank">Ir a Mi Portal U</a>
     </div>  
     
-    <!-- Agrega el script del asistente de Watson aquí -->
+    <!-- script del asistente de Watson -->
     <script>
         window.watsonAssistantChatOptions = {
-            integrationID: "0c843e55-d8a3-4cf8-8a0a-32d03b99d63d", // The ID of this integration.
-            region: "au-syd", // The region your integration is hosted in.
-            serviceInstanceID: "5996cc94-47d8-46f8-ab7a-8e773e3aea92", // The ID of your service instance.
+            integrationID: "0c843e55-d8a3-4cf8-8a0a-32d03b99d63d", 
+            region: "au-syd", 
+            serviceInstanceID: "5996cc94-47d8-46f8-ab7a-8e773e3aea92", 
             onLoad: function(instance) { instance.render(); }
         };
         setTimeout(function(){
@@ -59,11 +63,11 @@
                         typedText.innerHTML += message.charAt(charIndex);
                         charIndex++;
                     }
-                    setTimeout(typeWriter, 50); // Ajusta la velocidad de escritura aquí
+                    setTimeout(typeWriter, 50); 
                 }
             };
 
-            setTimeout(typeWriter, 2000); // Agrega un retraso de 2 segundos antes de comenzar a escribir el mensaje
+            setTimeout(typeWriter, 2000); 
         });
     </script>
 </body>

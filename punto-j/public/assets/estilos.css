@@ -12,7 +12,6 @@
     }
     }
 
-/* styles.css */
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
@@ -47,72 +46,56 @@ body {
     text-align: right;
 }
 
-/* Estilos para el botón "Ir a Cosmos UNAB" */
+/* Estilos para los botones "Cosmos" y "Mi Portal U" */
 .button-cosmos {
-    background-color: #f9913b;
-    color: #fff;
+    background-color: #007bff; 
+    color: #fff; 
     border: none;
-    padding: 80px 160px;
+    padding: 20px 40px; 
     border-radius: 5px;
     margin: 10px;
     cursor: pointer;
     display: inline-block;
     text-align: center;
-    font-size: 1.2em; /* Ajusta el tamaño de la fuente según tus necesidades */
+    font-size: 1.5em; 
+    text-decoration: none; 
 }
 
 .button-cosmos:hover {
-    background-color: #e67d00;
+    background-color: #0056b3; 
 }
 
-/* Estilos para el botón "Ir a Mi Portal U" */
 .button-tema {
-    background-color: #f9913b;
-    color: #fff;
+    background-color: #ff5722; 
+    color: #fff; 
     border: none;
-    padding: 80px 160px;
+    padding: 20px 40px; 
     border-radius: 5px;
     margin: 10px;
     cursor: pointer;
     display: inline-block;
     text-align: center;
-    font-size: 1.2em; /* Ajusta el tamaño de la fuente según tus necesidades */
+    font-size: 1.5em; 
+    text-decoration: none; /
 }
 
 .button-tema:hover {
-    background-color: #e67d00;
+    background-color: #e64a19; 
 }
 
-/* Estilos para centrar los botones */
 .centered-buttons {
     text-align: center;
 }
 
-/* Estilos para el botón "Cerrar Sesión" */
-.button-logout {
-    background-color: #f9913b;
-    color: #fff;
-    border: none;
-    padding: 10px 20px; /* Ajusta el tamaño del botón según tus necesidades */
-    border-radius: 5px;
-    margin: 10px auto; /* Centra el botón horizontalmente */
-    cursor: pointer;
-    display: inline-block;
-    text-align: center;
-}
-
-.button-logout:hover {
-    background-color: #e67d00; /* Cambiar a un tono más oscuro al pasar el cursor */
-}
-
 .welcome-message {
-    text-align: center; /* Centrar el contenido */
-    font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace !important;
+    text-align: center;
+    font-family: 'Courier New', cursive; 
     color: #e67d00;
-    white-space: pre-line; /* Mantiene los saltos de línea */
-    font-size: 24px; /* Tamaño de fuente personalizable */
-    line-height: 1.5; /* Espacio entre líneas personalizable */
+    white-space: pre-line;
+    font-size: 24px;
+    line-height: 1.5;
 }
+
 
 @keyframes typing {
     from { width: 0 }
