@@ -3,7 +3,6 @@
 <head>
     <title>Página de inicio</title>
     <link rel="stylesheet" href="{{asset('assets/estilos.css')}}">
-    <!-- Agrega el enlace a Font Awesome para los iconos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body class="home-page bg-dark">
@@ -12,9 +11,8 @@
             <img src="{{ asset('assets/unab.png') }}" alt="logo" style="max-width: 100px; margin-right: 10px;">
         </div>
         <div class="logout">
-            <!-- Reemplaza el botón de cerrar sesión por un icono de Font Awesome -->
             <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                <i class="fas fa-sign-out-alt"></i> <!-- Icono de cerrar sesión -->
+                <i class="fas fa-sign-out-alt"></i> 
             </a>
             <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                 @csrf
@@ -27,7 +25,6 @@
     </div>
     
     <div class="centered-buttons">
-        <!-- Estilos personalizados para los botones "Cosmos" y "Mi Portal U" -->
         <a class="button-cosmos" href="https://cosmos.unab.edu.co/" target="_blank">Ir a Cosmos UNAB</a>
         <a class="button-tema" href="https://miportalu.unab.edu.co/index.php?mensaje=usuarioInvalido&url=/modulos/ReservaEspaciosdeportivosyculturales/" target="_blank">Ir a Mi Portal U</a>
     </div>  
